@@ -6,8 +6,8 @@ import dynamic from 'next/dynamic';
 import { Suspense } from 'react';
 import { LoadingOverlay } from '@/components/loading-overlay';
 
-const FBXViewer = dynamic(
-  () => import('@/components/fbx-viewer').then(mod => mod.default),
+const ModelViewerWrapper = dynamic(
+  () => import('@/components/model-viewer-wrapper').then(mod => mod.default),
   { 
     ssr: false,
     loading: () => <LoadingOverlay />
@@ -18,7 +18,7 @@ export default function ModelViewer() {
   return (
     <main>
     <Suspense fallback={<LoadingOverlay />}>
-      <FBXViewer modelPath={"/models/model0.fbx"} />
+      <ModelViewerWrapper modelPath={"/models/radhe5.glb"} />
     </Suspense>
   </main>
   )
