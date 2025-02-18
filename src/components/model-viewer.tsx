@@ -18,7 +18,7 @@ export default function ModelViewer() {
   return (
     <main>
     <Suspense fallback={<LoadingOverlay />}>
-      <ModelViewerWrapper modelPath={"/models/radhe5.glb"} />
+      <ModelViewerWrapper modelPath={"/models/full.fbx"} />
     </Suspense>
   </main>
   )
